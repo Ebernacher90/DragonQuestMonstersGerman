@@ -279,7 +279,7 @@ jr_000_0094:
 
 Boot::
     nop
-    jp Jump_000_0150
+    jp Init
 
 
 HeaderLogo::
@@ -326,7 +326,7 @@ HeaderComplementCheck::
 HeaderGlobalChecksum::
     db $ec, $b5
 
-Jump_000_0150:
+Init:
     cp $11
     ld a, $00
     jr nz, jr_000_0157
